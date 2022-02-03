@@ -1,0 +1,43 @@
+.service {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.3s ease-out;
+
+  &__icon {
+    font-size: 32px;
+    color: #fb3e3e;
+    height: 68px;
+    width: 68px;
+    background-color: #fff;
+    box-shadow: 0 0 1.25rem rgba(2, 2, 2, 0.1);
+    line-height: 68px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.3s ease-out;
+  }
+
+  &__title {
+    margin: 1rem 0;
+    font-size: 22px;
+  }
+
+  &__description {
+    text-align: center;
+    color: darkred;
+    font-size: 14.5px;
+    max-width: 80%;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+  }
+
+  &:hover > &__icon {
+    color: #fff;
+    background-color: #fb3e3e;
+  }
+}

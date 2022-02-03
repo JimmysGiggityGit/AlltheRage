@@ -1,0 +1,50 @@
+@import '../vars.scss';
+
+.contact {
+  &__infoTitle {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  &__infoMuted {
+    color: crimson;
+  }
+
+  form {
+    margin-top: 30px;
+
+    @media only screen and (min-width: $bp-992) {
+      margin: 0;
+    }
+  }
+
+  textarea,
+  input {
+    border: 1px solid #e0e0e0;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  input {
+    height: 2.5rem;
+    border-radius: 4px;
+    outline: none;
+  }
+
+  .firstInput {
+    margin-bottom: 1.5rem;
+    @media only screen and (min-width: $bp-992) {
+      margin-bottom: 0;
+    }
+  }
+
+  .error {
+    color: #dc3545;
+    margin-top: 3px;
+
+    &::before {
+      display: inline;
+      content: '⚠ ';
+    }
+  }
+}

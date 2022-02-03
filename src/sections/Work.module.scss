@@ -1,0 +1,106 @@
+@import '../vars.scss';
+
+.work {
+  background-color: #f8f9fa;
+}
+
+.boxContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @media only screen and (min-width: $bp-992) {
+    //   992px
+    flex-direction: row;
+  }
+
+  @media only screen and (min-width: $bp-1200) {
+    justify-content: space-evenly;
+  }
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 25px;
+
+  @media only screen and (min-width: $bp-992) {
+    //   992px
+    margin-bottom: 0;
+  }
+
+  @media only screen and (min-width: $bp-1200) {
+    justify-content: space-evenly;
+  }
+
+  i {
+    font-size: 40px;
+    color: #fb4a4a;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    color: red;
+  }
+}
+
+// arrow icon code
+
+.boxIcon {
+  .leftArrow,
+  .rightArrow {
+    display: none;
+  }
+  @media only screen and (min-width: $bp-992) {
+    & {
+      position: relative;
+
+      .leftArrow,
+      .rightArrow {
+        position: absolute;
+        top: 30px;
+        width: 30px;
+        height: 30px;
+        background-color: #fb3e3e;
+        color: #fff;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+      }
+
+      .leftArrow {
+        left: 110%;
+      }
+
+      .rightArrow {
+        right: 110%;
+      }
+
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        top: 30px;
+        width: 67%;
+        border: 1px dashed #e0e0e0;
+      }
+
+      &::before {
+        left: 80%;
+      }
+
+      &::after {
+        right: 80%;
+      }
+    }
+  }
+}

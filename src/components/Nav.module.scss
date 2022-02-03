@@ -1,0 +1,145 @@
+@import '../vars.scss';
+
+.nav {
+  z-index: 99;
+  display: flex;
+  width: 100vw;
+  padding: 15px 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: #272a33;
+
+  @media only screen and (min-width: $bp-850) {
+    background-color: transparent;
+    padding: 30px 30px;
+    position: relative;
+  }
+
+  &__fixed {
+    background-color: #272a33;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 30px;
+  }
+
+  &__icon {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 20px;
+
+    @media only screen and (min-width: $bp-600) {
+      margin-right: 100px;
+    }
+
+    @media only screen and (min-width: $bp-850) {
+      display: none;
+    }
+  }
+
+  &__brand {
+    margin-right: 30px;
+
+    @media only screen and (min-width: $bp-950) {
+      margin-right: 60px;
+    }
+  }
+
+  &__brand a {
+    color: crimson;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Nosifer', serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    background-color: #272a33;
+    width: 100%;
+    padding: 20px;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+
+    @media only screen and (min-width: $bp-850) {
+      flex-direction: row;
+      align-items: center;
+      margin: 0;
+      width: 85%;
+      position: relative;
+      padding: 0;
+      background-color: transparent;
+      pointer-events: all;
+      visibility: visible;
+      opacity: 1;
+    }
+    @media only screen and (min-width: $bp-950) {
+      width: 80%;
+    }
+    @media only screen and (min-width: $bp-1100) {
+      width: 75%;
+    }
+  }
+
+  &__listFixed {
+    background-color:#272a33;
+  }
+
+  &__listVisible {
+    pointer-events: all;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__item {
+  }
+
+  &__item:last-of-type {
+    margin: 10px;
+    @media only screen and (min-width: $bp-850) {
+      margin: 0;
+      margin-left: 15px;
+      margin-right: 50px;
+    }
+    @media only screen and (min-width: $bp-950) {
+      margin-left: auto;
+    }
+  }
+
+  &__item:not(:last-of-type) {
+    font-size: 1rem;
+    height: auto;
+    margin: 10px 10px;
+    @media only screen and (min-width: $bp-850) {
+      margin: 0 8px;
+      font-size: 1rem;
+    }
+    @media only screen and (min-width: $bp-1100) {
+      margin: 0 15px;
+    }
+  }
+
+  &__item a {
+    color: crimson;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.3s color ease-out;
+  }
+
+  &__item a:hover {
+    color: #fff;
+  }
+}

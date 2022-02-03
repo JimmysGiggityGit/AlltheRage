@@ -1,0 +1,32 @@
+@import '../vars.scss';
+
+//.bglayout {
+//  background-image: linear-gradient(to right, red, grey);
+//  position: absolute;
+//  top: 0;
+//  right: 0;
+//  bottom: 0;
+//  left: 0;
+//  opacity: 0.9;
+//}
+
+.bgpattern {
+  position: absolute ;
+  z-index: 1;
+  bottom: -8px;
+  right: 0;
+  left: 0;
+
+  @media only screen and (min-width: $bp-450) {
+    bottom: -6px;
+  }
+  @media only screen and (min-width: $bp-768) {
+    bottom: -3px;
+  }
+  @media only screen and (min-width: $bp-1050) {
+    bottom: 0;
+  }
+  & img {
+    width: 100%;
+  }
+}
